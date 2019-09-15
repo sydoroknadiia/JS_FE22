@@ -8,17 +8,14 @@
 
 let input;
 let total = 0;
-const numbers = [];
-do {
-    input = Number(prompt('Введите число'));
-    if (Number.isNaN(input) === true) {
+while (input !== null) {
+    input = prompt ('Введите число');
+    if (Number.isNaN(Number(input))) {
         alert('Было введено не число, попробуйте еще раз');
-    } else {
-        numbers.push(input);
-    }
-} while (input !== 0) 
-    let startNum = 0;
-    for (let key of numbers){
-        total = startNum += key;
-    }
-console.log(`Общая сумма чисел равна ${total}`);
+        } else {
+    total += Number(input);
+}
+}
+alert (`Общая сумма чисел равна ${total}`);
+
+
